@@ -9,7 +9,6 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
 }
 .navbarNorm {
   /* border: 2px solid green; */
@@ -20,7 +19,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 9;
 }
 
 .navigation_logo {

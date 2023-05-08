@@ -49,7 +49,7 @@
   border: none;
   text-align: center;
   color: #c8ac48;
-  margin-top: 18%;
+  /* margin-top: 18%; */
 }
 .ReadMoreModalBody {
   background: url(../images/grey_pattern.png);

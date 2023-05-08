@@ -8,7 +8,7 @@
     height: 60vh;
     text-align: center;
   }
-  .fifthJumbotronBackGroundImage {
+  .fifthJumbotronBackGroundImage { 
     background: linear-gradient(#c8ac48df, #c8ac48dd, #c8ac48dc, #c8ac48de),
       url("../images/progress.jpg") fixed;
     background-repeat: no-repeat;
@@ -28,4 +28,32 @@
     font-size: 150%;
     width: 70%;
     margin: 0 auto;
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+    .fifth_jumbotronFirstHeader {
+      margin-top: 15%;
+    }
+    .fifth_jumbotronFirstPara {
+      width: 98%;
+      font-size: 115%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    
+    .fifth_jumbotronFirstHeader {
+      line-height: 150%;
+      font-size: 180%;
+      margin: 3% auto;
+      margin-top: 20%;
+    }
+    .fifth_jumbotronFirstPara {
+      width: 95%;
+      margin-bottom: 14%;
+    }
   }

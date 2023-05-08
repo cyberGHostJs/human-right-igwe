@@ -8,3 +8,11 @@
     background: #c8ac48;
     background-repeat: repeat;
   }
+
+
+
+  @media screen and (max-width: 480px) {
+  .ten_jumbotron {
+    font-size: 14px;
+  }
+}
