@@ -1,0 +1,168 @@
+/* ==================
+===Carousel==class=== 
+=====================*/
+.CarouselItem {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+.Carousel-image {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background: url(../images/progress.jpg);
+}
+.Carousel-image2 {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background: url(../images/services.jpg);
+}
+.Carousel-image-overlay {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/dark_pattern.png);
+  opacity: 0.92;
+}
+
+/*=======================
+  ==========H-R============
+  =======================*/
+.hr {
+  width: 90%;
+  margin: 10% auto;
+  margin-bottom: 0%;
+  color: grey;
+  border-top: 2px solid grey;
+}
+/*=====================
+  ===Carousel-header====
+  =======================*/
+.Carousel-header-row {
+}
+.Carousel-header-col {
+}
+.Carousel-header {
+  margin-top: 3%;
+  padding: 2%;
+  font-size: 300%;
+  font-family: "Libre Baskerville", serif;
+  position: relative;
+}
+.Carousel-header:before {
+  content: "";
+  position: absolute;
+  width: 7%;
+  height: 1px;
+  bottom: 0;
+  left: 46.5%;
+  border-bottom: 5px solid #c8ac48;
+}
+
+/*=====================
+  ===Carousel-paragraph====
+  =======================*/
+.Carousel-paragraph-row {
+}
+.Carousel-paragraph-col {
+}
+.Carousel-paragraph {
+  padding: 2%;
+  margin-top: 3%;
+  color: grey;
+  font-family: sans-serif;
+}
+
+/*=====================
+  ===Carousel-indicators====
+  =======================*/
+div.carousel-indicators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.carousel-indicators .active {
+  background-color: #c8ac48 !important;
+  width: 45px;
+}
+.Carousel-button-col {
+}
+
+
+
+/*===============================
+  =====@MEDIA==QUERY===1024px====
+  ================================*/
+  @media screen and (max-width: 1024px) {
+    .hr {
+      margin: 14% auto;
+      margin-bottom: 0%;
+    }
+    .Carousel-header {
+      margin-top: 10%;
+      font-size: 230%;
+      padding-bottom: 3%;
+    }
+    .Carousel-header:before {
+      width: 15%;
+      height: 1px;
+      left: 42%;
+    }
+  }
+
+/*===============================
+  ====@MEDIA==QUERY===768px======
+  ================================*/
+@media screen and (max-width: 768px) {
+  .hr {
+    margin: 16% auto;
+    margin-bottom: 0%;
+  }
+  .Carousel-header {
+    margin-top: 16%;
+    font-size: 210%;
+    padding-bottom: 4%;
+  }
+  .Carousel-header:before {
+    width: 20%;
+    height: 1px;
+    left: 40%;
+  }
+}
+
+/*===============================
+  ====@MEDIA==QUERY==655px=====
+  ================================*/
+@media screen and (max-width: 655px) {
+  .hr {
+    margin: 22% auto;
+    margin-bottom: 0%;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==480px======
+  ================================*/
+@media screen and (max-width: 480px) {
+  .hr {
+    margin: 25% auto;
+    margin-bottom: 0%;
+  }
+  .Carousel-header {
+    margin-top: 28%;
+    font-size: 200%;
+    padding-bottom: 5%;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==375px=======
+  ================================*/
+@media screen and (max-width: 375px) {
+  .hr {
+    margin: 30% auto;
+    margin-bottom: 0%;
+  }
+}

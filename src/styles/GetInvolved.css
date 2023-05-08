@@ -1,0 +1,31 @@
+.fifth_jumbotron {
+    font-family: "Libre Baskerville", serif;
+    /* position: relative; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 60vh;
+    text-align: center;
+  }
+  .fifthJumbotronBackGroundImage {
+    background: linear-gradient(#c8ac48df, #c8ac48dd, #c8ac48dc, #c8ac48de),
+      url("../images/progress.jpg") fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 0vh;
+    background-position-y: 0vh;
+  }
+  .fifth_jumbotronFirstHeader {
+    /* border: 1px solid black; */
+    font-size: 225%;
+    width: fit-content;
+    margin: 2% auto;
+    margin-top: 8%;
+  }
+  .fifth_jumbotronFirstPara {
+    /* border: 1px solid blue; */
+    font-size: 150%;
+    width: 70%;
+    margin: 0 auto;
+  }

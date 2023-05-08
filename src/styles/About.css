@@ -1,0 +1,255 @@
+.about_row {
+  background: linear-gradient(#c8ac48c9, #c8ac48c9, #c8ac48c9, #c8ac48c9),
+    url("../images/about_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 125vh;
+  background-position-y: 0vh;
+}
+.second_jumbotron {
+  font-family: "Libre Baskerville", serif;
+  position: relative;
+  background: url(../images/grey_pattern.png);
+  background-position: center;
+  background-repeat: repeat;
+  color: #fff;
+  height: 100vh;
+}
+.PageNumberContainer:before {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 1px;
+  left: 8.3%;
+  border-bottom: 2px solid #c8ac48;
+  transform: rotate(90deg) !important;
+  z-index: 1;
+  top: 0;
+}
+.PageNumberCoverDiv {
+  font-family: "Libre Baskerville", serif !important;
+  margin: 5.8% 6.5%;
+}
+.second_jumbotron_head {
+  font-weight: 500;
+  color: #c8ac48;
+  margin-top: 2%;
+}
+.second_jumbotron_FirstPara {
+  font-family: sans-serif;
+  color: grey;
+  font-weight: 500;
+  font-size: 20.1px;
+  width: 75%;
+}
+.second_jumbotron_SecondPara {
+  font-family: sans-serif;
+  color: grey;
+  font-weight: 500;
+  font-size: 17px;
+  width: 71%;
+  margin-top: 4.6%;
+}
+.founder_name {
+  font-family: sans-serif;
+  color: black;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-top: 7.5%;
+}
+.founder_founder {
+  font-family: sans-serif;
+  color: #c8ac48;
+  font-weight: 700;
+}
+.personAbout {
+  position: absolute;
+  top: 0;
+  left: 75%;
+}
+
+/*===========================
+  ====PAGE NUMBERING LOGO======
+  =============================*/
+.SectionNumLogoAbout {
+  position: relative;
+  font-family: "Libre Baskerville", serif !important;
+  width: fit-content;
+  /* margin: 5% auto; */ /*this leaves it in the start but to send the numbering to the middle we have to add this*/
+}
+.SectionNumClassBlack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Use translate to center the number perfectly */
+  padding-top: 0;
+  color: black;
+}
+
+/*===============================
+  =====@MEDIA==QUERY==1229px=======
+  ================================*/
+@media screen and (max-width: 1229px) {
+  .personAbout {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 65vh;
+    height: inherit;
+  }
+
+  .about_row {
+    background: linear-gradient(#c8ac48c9, #c8ac48c9, #c8ac48c9, #c8ac48c9),
+      url("../images/about_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 105vh;
+    background-position-y: 0vh;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==1130px=======
+  ================================*/
+@media screen and (max-width: 1130px) {
+  .personAbout {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 59vh;
+    height: inherit;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==1024px=======
+  ================================*/
+@media screen and (max-width: 1024px) {
+
+  .personAbout {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 55vh;
+  }
+  .about_row {
+    background: linear-gradient(#c8ac48c9, #c8ac48c9, #c8ac48c9, #c8ac48c9),
+      url("../images/about_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 104vh;
+    background-position-y: 0vh;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==991px=======
+  ================================*/
+@media screen and (max-width: 991px) {
+  .personAbout {
+    display: none;
+  }
+  .second_jumbotron {
+    height: max-content;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==768px=======
+  ================================*/
+@media screen and (max-width: 768px) {
+  .founder_founder {
+    margin-bottom: 10%;
+  }
+  .PageNumberCoverDiv {
+    margin: 6.3% 3%;
+    margin-top: 9%;
+  }
+  .PageNumberContainer:before {
+    width: 10%;
+    height: 1px;
+    left: 4%;
+    top: 0;
+  }
+  .second_jumbotron_FirstPara {
+    width: 89%;
+  }
+  .second_jumbotron_SecondPara {
+    width: 84%;
+  }
+}
+/*===============================
+  =====@MEDIA==QUERY==600px=======
+  ================================*/
+@media screen and (max-width: 600px) {
+  .PageNumberContainer:before {
+    left: 6%;
+  }
+}
+/*===============================
+  =====@MEDIA==QUERY==500px=======
+  ================================*/
+@media screen and (max-width: 500px) {
+  .PageNumberContainer:before {
+    left: 6.4%;
+  }
+}
+/*===============================
+  =====@MEDIA==QUERY==480px=======
+  ================================*/
+@media screen and (max-width: 480px) {
+  .second_jumbotron_FirstPara {
+    width: 95%;
+  }
+  .second_jumbotron_SecondPara {
+    width: 91%;
+  }
+
+  .founder_founder {
+    margin-bottom: 16%;
+  }
+  .PageNumberCoverDiv {
+    margin: 6.3% auto;
+    margin-top: 10%;
+  }
+  .PageNumberContainer:before {
+    width: 10%;
+    height: 1px;
+    left: 4.5%;
+    top: 0;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==375px=======
+  ================================*/
+@media screen and (max-width: 375px) {
+  .PageNumberCoverDiv {
+    margin: 18.8% 0%;
+  }
+  .PageNumberContainer:before {
+    width: 13%;
+    height: 1px;
+    left: 5.3%;
+    top: 0;
+  }
+}
+
+/*===============================
+  =====@MEDIA==QUERY==320px=======
+  ================================*/
+@media screen and (max-width: 320px) {
+  .PageNumberCoverDiv {
+    margin: 18.8% 0%;
+  }
+  .PageNumberContainer:before {
+    left: 7.2%;
+  }
+}

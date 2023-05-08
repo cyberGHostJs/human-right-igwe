@@ -1,0 +1,10 @@
+.ten_jumbotron {
+    font-family: "Libre Baskerville", serif;
+    position: relative;
+    color: #fff;
+    height: 8vh;
+  }
+  .ten_jumbotronBackgroundColor {
+    background: #c8ac48;
+    background-repeat: repeat;
+  }

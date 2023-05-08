@@ -1,0 +1,44 @@
+.navbar.fixed-top {
+  font-weight: 900;
+  padding: 1.7%;
+  background: url(../images/dark_pattern.png);
+  transition: all 0.5s;
+  /* transition: all ease-in-out 0.8s; */
+  position: fixed;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbarNorm {
+  /* border: 2px solid green; */
+  position: absolute !important;
+  font-weight: 900;
+  padding: 1.7% !important;
+  background: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navigation_logo {
+  font-family: "Libre Baskerville", serif;
+  font-size: 200%;
+  margin-left: 5%;
+}
+
+.navigation_links {
+  /* border: 2px solid green; */
+  font-size: 90%;
+  font-family: sans-serif;
+  margin-right: 5%;
+}
+.navigation_links .active {
+  color: #c8ac48 !important;
+}
+.navigation_logo span {
+  font-size: 30px;
+  margin-left: 3%;
+}

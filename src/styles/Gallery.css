@@ -1,0 +1,153 @@
+.third_jumbotron {
+    /* border: 1px solid black; */
+    font-family: "Libre Baskerville", serif;
+    position: relative;
+    background: url("../images/services.jpg") fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: fit-content;
+    margin: 0;
+  }
+  .thirdJumbotronBackGroundImage {
+    /* left: 0;
+    width: 100%;
+    background-position: 0px 0px;
+    background-size: auto;
+    
+    
+    /* position: absolute; */
+    height: fit-content;
+    opacity: 0.97; 
+    background: url("../images/dark_pattern.png"); 
+  }
+  .PageNumberLinkLine:before {
+    content: "";
+    position: absolute;
+    width: 5%;
+    height: 1px;
+    left: 47.4%;
+    border-bottom: 2px solid #c8ac48;
+    transform: rotate(90deg) !important;
+    z-index: 1;
+    top: 0;
+  }
+  .thirdSectionHeader1 {
+    margin-top: -3%;
+    font-family: "Libre Baskerville", serif;
+  }
+  .thirdSectionPara1 {
+    /* width: 50%; */
+    margin: 1% auto;
+    font-family: sans-serif;
+    color: grey !important;
+  }
+  .thirdSectionNumberLogo {
+    font-family: "Libre Baskerville", serif !important;
+    /* border: 1px solid green; */
+    width: 8%;
+    margin: 5% 47.5%;
+  }
+  .thirdSectionNumClass {
+    margin-left: -41%;
+    padding-top: 0;
+    color: white;
+  }
+  .thirdJumbotronRowCover {
+    text-align: left;
+    /* margin: 30px 78px; */
+  }
+  .thirdJumbotronColCover {
+    display: flex;
+  }
+  .thirdJumbotronColCover:hover {
+    border: 0px solid black; /* where the animation should be*/
+  }
+  .thirdJumbotronIconLaw {
+    margin: 5%;
+    color: #c8ac48;
+  }
+  .thirdJumbotronColHeader {
+    width: fit-content;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 23px;
+    position: relative;
+    opacity: 1;
+    margin: 5% 0;
+  }
+  .thirdJumbotronColHeader:before {
+    width: 22%;
+    content: "";
+    position: absolute;
+    height: 10px;
+    top: 100%;
+    left: 0%;
+    border-bottom: 2px solid #c8ac48;
+  }
+  .thirdJumbotronColHeader:hover {
+    color: #c8ac48;
+  }
+  .thirdJumbotronColPara {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: grey;
+    width: 80%;
+    margin-bottom: 10%;
+  }
+  .PageNumberLinkLine:before {
+    content: "";
+    position: absolute;
+    width: 5%;
+    height: 1px;
+    left: 47.4%;
+    border-bottom: 2px solid #c8ac48;
+    transform: rotate(90deg) !important;
+    z-index: 1;
+    top: 0;
+  }
+  .SectionNumLogo {
+    position: relative;
+    font-family: "Libre Baskerville", serif !important;
+    width: fit-content;
+    margin: 5% auto;
+  }
+  .SectionNumLogo img {
+    margin: 0 auto;
+  }
+  .SectionNumClasswhite {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Use translate to center the number perfectly */
+    padding-top: 0;
+    color: white;
+  }
+  .button_container{
+    width: 30%;
+    margin: 8vh auto;
+  }
+
+  /*===========================
+  ====@MEDIA=768PX=============
+  =============================*/
+  @media screen and (max-width: 768px) {
+  .button_container{
+    width: 35%;
+    margin: 8vh auto;
+  }
+}
+
+  /*===========================
+  ====@MEDIA=480PX=============
+  =============================*/
+  @media screen and (max-width: 480px) {
+  .button_container{
+    width: 60%;
+    margin: 8vh auto;
+  }
+}
