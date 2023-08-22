@@ -1,14 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Button, Image, Form } from "react-bootstrap";
 import logo from "../images/section_number_bg.png";
 
 import person from "../images/person2.jpg";
 import "../styles/Form.css";
+import { firestore } from "./firebase";
 
 const FormPage = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    // Add more fields here...
+  });
+
+  const handleChange = (event) => {
+    // can be moved to utilities
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // const handleChange = (setterFunction) => (event) => {
+  //   setterFunction(event.target.value);
+  // };
+
+  const handleSubmit = async (event) => {
+    
+    event.preventDefault();
+    // Access form data from the formData state
+    console.log(formData);
+    // You can now send this data to a backend server or perform other actions
+    try {
+       // Create a new FormData entry in Firestore
+       await firestore.collection("siteFormData").add({
+        siteFormData: formData,
+      });
+
+      // Clear the FormData details input
+      setFormData("");
+    } catch (error) {
+      console.error("Create FormData error:", error);
+      // Handle create hospital error and display an error message
+    }
+
+  }
+
   return (
-    <Row style={{ margin: "0", padding: "0" }} id="contact" className="seventh_jumbotron ">
-            <style type="text/css">
+    <Row
+      style={{ margin: "0", padding: "0", border: "1px solid blue" }}
+      id="contact"
+      className="seventh_jumbotron "
+    >
+      <style type="text/css">
         {`
   .btn-formSubmit {
     text-align: center;
@@ -28,9 +72,7 @@ const FormPage = () => {
       <Col md="12" className="seventh_jumbotronBackGroundImage">
         <div className="PageNumberLinkLine ">
           {Numberings("SectionNumLogo", "04", "SectionNumClasswhite")}
-          <Row 
-          style={{ margin: "0" }}
-          >
+          <Row style={{ margin: "0" }}>
             <Col lg="6">
               <Image
                 className="seventhFormImg"
@@ -51,32 +93,64 @@ const FormPage = () => {
                 "formTopHeader",
                 "formTopPara"
               )}
-              <Form className="contact_form">
+
+              {/* //---------------------------------form------------------------------------------- */}
+              <Form
+                onSubmit={handleSubmit}
+                className="contact_form"
+                style={{ border: "1px solid green" }}
+              >
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridFirstName">
-                    <Form.Control type="text" placeholder="First Name" />
+                    <Form.Control
+                      type="text"
+                      name="firstName"
+                      placeholder="First Name"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                    />
                   </Form.Group>
 
                   <Form.Group as={Col} controlId="formGridLastName">
-                    <Form.Control type="text" placeholder="Last Name" />
+                    <Form.Control
+                      type="text"
+                      name="lastName"
+                      placeholder="Last Name"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                    />
                   </Form.Group>
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridEmail">
                     <Form.Control
                       type="email"
+                      name="email"
                       placeholder="Your E-Mail"
                       style={{ outline: "none" }}
+                      value={formData.email}
+                      onChange={handleChange}
                     />
                   </Form.Group>
 
                   <Form.Group as={Col} controlId="formGridPhone">
-                    <Form.Control type="tel" placeholder="Your Phone" />
+                    <Form.Control
+                      name="phone"
+                      type="tel"
+                      placeholder="Your Phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
                   </Form.Group>
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridState">
-                    <Form.Select placeholder="Message Purpose">
+                    <Form.Select
+                     name="purpose"
+                      placeholder="Message Purpose"
+                      value={formData.purpose}
+                      onChange={handleChange}
+                    >
                       <option>Message Purpose</option>
                       <option>Report Human right abuse</option>
                       <option>Get involved/ Donate</option>
@@ -84,20 +158,25 @@ const FormPage = () => {
                   </Form.Group>
                 </Row>
                 <Form.Control
+                name="message"
                   as="textarea"
                   placeholder="Your Message"
                   style={{ height: "15px" }}
+                  value={formData.message}
+                  onChange={handleChange}
+
                 />
-                <div className="FormButtonCover" >
-                <Button
-                  variant="formSubmit"
-                  type="submit"
-                  as="input"
-                  value="SEND REQUEST"
-                  style={{width: '100%', padding:'5%'}}
-                />
+                <div className="FormButtonCover">
+                  <Button
+                    variant="formSubmit"
+                    type="submit"
+                    as="input"
+                    value="SEND REQUEST"
+                    style={{ width: "100%", padding: "5%" }}
+                  />
                 </div>
               </Form>
+              {/* //---------------------------------form------------------------------------------- */}
             </Col>
           </Row>
         </div>
