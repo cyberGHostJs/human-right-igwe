@@ -9,6 +9,11 @@ import { firestore } from "./firebase";
 const FormPage = () => {
   const [formData, setFormData] = useState({
     email: "",
+    firstName: "",
+    lastName: "",
+    phone: "",
+    message: "",
+    purpose: "message purpose",
     // Add more fields here...
   });
 
@@ -26,29 +31,35 @@ const FormPage = () => {
   // };
 
   const handleSubmit = async (event) => {
-    
     event.preventDefault();
     // Access form data from the formData state
     console.log(formData);
     // You can now send this data to a backend server or perform other actions
     try {
-       // Create a new FormData entry in Firestore
-       await firestore.collection("siteFormData").add({
+      // Create a new FormData entry in Firestore
+      await firestore.collection("siteFormData").add({
         siteFormData: formData,
       });
 
       // Clear the FormData details input
-      setFormData("");
+      setFormData({
+        email: "",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        message: "",
+        purpose: "message purpose",
+        // Reset other fields as needed
+      });
     } catch (error) {
       console.error("Create FormData error:", error);
       // Handle create hospital error and display an error message
     }
-
-  }
+  };
 
   return (
     <Row
-      style={{ margin: "0", padding: "0", border: "1px solid blue" }}
+      style={{ margin: "0", padding: "0" }}
       id="contact"
       className="seventh_jumbotron "
     >
@@ -95,11 +106,7 @@ const FormPage = () => {
               )}
 
               {/* //---------------------------------form------------------------------------------- */}
-              <Form
-                onSubmit={handleSubmit}
-                className="contact_form"
-                style={{ border: "1px solid green" }}
-              >
+              <Form onSubmit={handleSubmit} className="contact_form">
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridFirstName">
                     <Form.Control
@@ -146,7 +153,7 @@ const FormPage = () => {
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Select
-                     name="purpose"
+                      name="purpose"
                       placeholder="Message Purpose"
                       value={formData.purpose}
                       onChange={handleChange}
@@ -158,13 +165,12 @@ const FormPage = () => {
                   </Form.Group>
                 </Row>
                 <Form.Control
-                name="message"
+                  name="message"
                   as="textarea"
                   placeholder="Your Message"
                   style={{ height: "15px" }}
                   value={formData.message}
                   onChange={handleChange}
-
                 />
                 <div className="FormButtonCover">
                   <Button
