@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Image, Form } from "react-bootstrap";
 import logo from "../images/section_number_bg.png";
 
@@ -16,6 +16,7 @@ const FormPage = () => {
     purpose: "message purpose",
     // Add more fields here...
   });
+  const [ sent, setSent] = useState(false)
 
   const handleChange = (event) => {
     // can be moved to utilities
@@ -51,11 +52,24 @@ const FormPage = () => {
         purpose: "message purpose",
         // Reset other fields as needed
       });
+      setSent(true)
     } catch (error) {
       console.error("Create FormData error:", error);
       // Handle create hospital error and display an error message
     }
   };
+    // helps reset the failed state back to false after a failed otp code
+    useEffect(() => {
+      if (sent) {
+        const timeoutId = setTimeout(() => {
+          setSent(false);
+        }, 2000);
+  
+        return () => {
+          clearTimeout(timeoutId);
+        };
+      }
+    }, [sent]);
 
   return (
     <Row
@@ -106,8 +120,9 @@ const FormPage = () => {
               )}
 
               {/* //---------------------------------form------------------------------------------- */}
-              <Form onSubmit={handleSubmit} className="contact_form">
+              <Form onSubmit={handleSubmit} className="contact_form" style={{ position: "relative", left: "0"}}>
                 <Row className="mb-3">
+                { sent ? <p style={{ position: "absolute", fontSize: "50px", color: "white", width: "100%", textAlign: "center", background: "#c8ac48"}}>sent</p> : "" }
                   <Form.Group as={Col} controlId="formGridFirstName">
                     <Form.Control
                       type="text"
